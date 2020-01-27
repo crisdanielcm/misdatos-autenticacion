@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const authController = require('../controllers/authentication.controller');
 
-app.post('/login', authController.login);
+const { verifyToken } = require('../middlewares/authentication');
+
+app.post('/login', verifyToken, authController.login);
 
 module.exports = app;

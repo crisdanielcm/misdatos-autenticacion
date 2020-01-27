@@ -23,7 +23,8 @@ process.env.PORT = process.env.PORT || 3002;
 //60 minutos
 //24 horas
 //2 dias
-process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 2;
+//1000 milisegundos
+process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 2 * 1000;
 
 //==============================
 //SEED de autenticacion
